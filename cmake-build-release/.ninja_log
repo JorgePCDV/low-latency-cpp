@@ -1,9 +1,17 @@
 # ninja log v5
-0	5	0	clean	a31eedcededa8236
-2	970	1707429357686223556	CMakeFiles/libcommon.dir/hey.cpp.o	53c4056be6d786b5
+1093	2114	1709202714961333919	CMakeFiles/mem_pool_example.dir/mem_pool_example.cpp.o	167e1c265b2fa493
+0	1680	1709202714533333901	CMakeFiles/libcommon.dir/mem_pool_example.cpp.o	148651de225d2d5
+2114	2204	1709202715053333922	mem_pool_example	c4dbef9fd96e691e
+0	4	0	clean	a31eedcededa8236
+0	1093	1709202713941333878	CMakeFiles/libcommon.dir/hey.cpp.o	53c4056be6d786b5
+1	1629	1709202714481333899	CMakeFiles/thread_example.dir/thread_example.cpp.o	2e4b629eed74fb2b
+0	1629	1709202714481333899	CMakeFiles/libcommon.dir/thread_example.cpp.o	3459557f90bca13d
+1680	1862	1709202714713333909	liblibcommon.a	3b3125bfb062c331
+1862	1977	1709202714829333913	thread_example	e86227d3e3cb31f3
 0	7	0	clean	a31eedcededa8236
-1	1602	1707429458872661135	CMakeFiles/libcommon.dir/hey.cpp.o	53c4056be6d786b5
-2	2326	1707429459600661164	CMakeFiles/thread_example.dir/thread_example.cpp.o	2e4b629eed74fb2b
-2	2329	1707429459604661165	CMakeFiles/libcommon.dir/thread_example.cpp.o	3459557f90bca13d
-2329	2574	1707429459848661174	liblibcommon.a	c5e679fbb3ae3d2f
-2574	2699	1707429459972661179	thread_example	e86227d3e3cb31f3
+1	1055	1709202813557062570	CMakeFiles/libcommon.dir/hey.cpp.o	53c4056be6d786b5
+7	1839	1709202814345062602	CMakeFiles/mem_pool_example.dir/mem_pool_example.cpp.o	167e1c265b2fa493
+3	1874	1709202814377062603	CMakeFiles/libcommon.dir/thread_example.cpp.o	3459557f90bca13d
+2	1914	1709202814417062604	CMakeFiles/libcommon.dir/mem_pool_example.cpp.o	148651de225d2d5
+1914	1983	1709202814485062607	liblibcommon.a	3b3125bfb062c331
+1983	2095	1709202814597062612	mem_pool_example	c4dbef9fd96e691e
