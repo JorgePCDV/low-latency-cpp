@@ -56,6 +56,13 @@ build CMakeFiles/libcommon.dir/hey.cpp.o: CXX_COMPILER__libcommon_Release /home/
   OBJECT_DIR = CMakeFiles/libcommon.dir
   OBJECT_FILE_DIR = CMakeFiles/libcommon.dir
 
+build CMakeFiles/libcommon.dir/lf_queue_example.cpp.o: CXX_COMPILER__libcommon_Release /home/goly/Projects/low-latency-cpp/lf_queue_example.cpp || cmake_object_order_depends_target_libcommon
+  DEP_FILE = CMakeFiles/libcommon.dir/lf_queue_example.cpp.o.d
+  FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/goly/Projects/low-latency-cpp
+  OBJECT_DIR = CMakeFiles/libcommon.dir
+  OBJECT_FILE_DIR = CMakeFiles/libcommon.dir
+
 build CMakeFiles/libcommon.dir/mem_pool_example.cpp.o: CXX_COMPILER__libcommon_Release /home/goly/Projects/low-latency-cpp/mem_pool_example.cpp || cmake_object_order_depends_target_libcommon
   DEP_FILE = CMakeFiles/libcommon.dir/mem_pool_example.cpp.o.d
   FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG -std=gnu++20
@@ -78,13 +85,47 @@ build CMakeFiles/libcommon.dir/thread_example.cpp.o: CXX_COMPILER__libcommon_Rel
 #############################################
 # Link the static library liblibcommon.a
 
-build liblibcommon.a: CXX_STATIC_LIBRARY_LINKER__libcommon_Release CMakeFiles/libcommon.dir/hey.cpp.o CMakeFiles/libcommon.dir/mem_pool_example.cpp.o CMakeFiles/libcommon.dir/thread_example.cpp.o
+build liblibcommon.a: CXX_STATIC_LIBRARY_LINKER__libcommon_Release CMakeFiles/libcommon.dir/hey.cpp.o CMakeFiles/libcommon.dir/lf_queue_example.cpp.o CMakeFiles/libcommon.dir/mem_pool_example.cpp.o CMakeFiles/libcommon.dir/thread_example.cpp.o
   LANGUAGE_COMPILE_FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles/libcommon.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = liblibcommon.a
   TARGET_PDB = libcommon.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target thread_example
+
+
+#############################################
+# Order-only phony target for thread_example
+
+build cmake_object_order_depends_target_thread_example: phony || cmake_object_order_depends_target_libcommon
+
+build CMakeFiles/thread_example.dir/thread_example.cpp.o: CXX_COMPILER__thread_example_Release /home/goly/Projects/low-latency-cpp/thread_example.cpp || cmake_object_order_depends_target_thread_example
+  DEP_FILE = CMakeFiles/thread_example.dir/thread_example.cpp.o.d
+  FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/goly/Projects/low-latency-cpp
+  OBJECT_DIR = CMakeFiles/thread_example.dir
+  OBJECT_FILE_DIR = CMakeFiles/thread_example.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target thread_example
+
+
+#############################################
+# Link the executable thread_example
+
+build thread_example: CXX_EXECUTABLE_LINKER__thread_example_Release CMakeFiles/thread_example.dir/thread_example.cpp.o | liblibcommon.a || liblibcommon.a
+  FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = liblibcommon.a  -lpthread
+  OBJECT_DIR = CMakeFiles/thread_example.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = thread_example
+  TARGET_PDB = thread_example.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target mem_pool_example
@@ -119,6 +160,40 @@ build mem_pool_example: CXX_EXECUTABLE_LINKER__mem_pool_example_Release CMakeFil
   PRE_LINK = :
   TARGET_FILE = mem_pool_example
   TARGET_PDB = mem_pool_example.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target lf_queue_example
+
+
+#############################################
+# Order-only phony target for lf_queue_example
+
+build cmake_object_order_depends_target_lf_queue_example: phony || cmake_object_order_depends_target_libcommon
+
+build CMakeFiles/lf_queue_example.dir/lf_queue_example.cpp.o: CXX_COMPILER__lf_queue_example_Release /home/goly/Projects/low-latency-cpp/lf_queue_example.cpp || cmake_object_order_depends_target_lf_queue_example
+  DEP_FILE = CMakeFiles/lf_queue_example.dir/lf_queue_example.cpp.o.d
+  FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/goly/Projects/low-latency-cpp
+  OBJECT_DIR = CMakeFiles/lf_queue_example.dir
+  OBJECT_FILE_DIR = CMakeFiles/lf_queue_example.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lf_queue_example
+
+
+#############################################
+# Link the executable lf_queue_example
+
+build lf_queue_example: CXX_EXECUTABLE_LINKER__lf_queue_example_Release CMakeFiles/lf_queue_example.dir/lf_queue_example.cpp.o | liblibcommon.a || liblibcommon.a
+  FLAGS = -std=c++2a -Wall -Wextra -Werror -Wpedantic -O3 -DNDEBUG
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = liblibcommon.a  -lpthread
+  OBJECT_DIR = CMakeFiles/lf_queue_example.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lf_queue_example
+  TARGET_PDB = lf_queue_example.dbg
 
 
 #############################################
@@ -156,7 +231,7 @@ build libcommon: phony liblibcommon.a
 #############################################
 # Folder: /home/goly/Projects/low-latency-cpp/cmake-build-release
 
-build all: phony liblibcommon.a mem_pool_example
+build all: phony liblibcommon.a thread_example mem_pool_example lf_queue_example
 
 # =============================================================================
 # Unknown Build Time Dependencies.
